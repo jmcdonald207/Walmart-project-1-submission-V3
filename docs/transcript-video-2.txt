@@ -1,0 +1,27 @@
+DRAFT RECORDING SCRIPT — VIDEO 2: DETAILED CODEBASE WALKTHROUGH
+FIN 43900 Project 1 | Walmart | Target: no longer than 5:00
+STATUS: NOT A RECORDING TRANSCRIPT. Replace or correct after recording to match spoken words.
+Do not read bracketed screen directions aloud.
+
+[0:00–0:35 | Open README.md.]
+For my Project 1, I built a standard-library Python workflow to analyze whether Walmart common stock could be attractive to a buy-side portfolio manager. My repository contains three primary components: the five-year pro forma in models/walmart_proforma.py, the integrated DCF in models/walmart_project1.py, and one-at-a-time sensitivity tests in models/walmart_sensitivity.py. The README explains how to reproduce the analysis.
+
+[0:35–1:35 | Open models/walmart_proforma.py, show OPEN, A, project and assert_balanced.]
+The pro forma starts with Walmart's fiscal 2026 financial balances, recorded in millions of dollars. The A dictionary contains assumptions for five projected fiscal years, 2027 to 2031, including revenue growth, gross margin, SG&A relative to gross profit, capital expenditures, taxes, and inventory days. The project function calculates sales, gross profit, operating income, and net income. It also rolls forward assets, borrowings, and equity and calculates free cash flow to equity. The model draws on a revolver when needed to maintain minimum cash. For each projected year, assert_balanced checks the accounting identity that assets equal liabilities plus equity. An independent cash check reconstructs ending cash from beginning cash and the recorded movements. A balanced forecast is necessary but does not prove that all starting figures or assumptions are correct.
+
+[1:35–2:35 | Open models/walmart_project1.py, show SCENARIOS, fcff_by_year and dcf.]
+The integrated valuation uses the same projection engine. The scenario inputs change growth, margins, SG&A, and capital spending to produce downside, base, and upside cases. My fcff_by_year function converts the model-specific FCFE figures into FCFF by adding scheduled principal repayments and after-tax interest. The DCF discounts each annual FCFF at the assumed 7.5 percent weighted average cost of capital, adds a Gordon-growth terminal value using 2.5 percent perpetual growth, and produces enterprise value. It then adds cash and subtracts modeled borrowings before dividing by shares. This last step is a provisional common-equity bridge because minority interests, leases, and other claims still require a consistent valuation treatment.
+
+[2:35–3:20 | Open models/walmart_sensitivity.py and outputs/visible-output.md.]
+Lab 11 sensitivity tests change gross margin by half a percentage point and SG&A as a fraction of gross profit by one percentage point, one variable at a time. Each case reruns the statements and their checks, compares income, cash flow, and value, and then verifies that restoring the original inputs restores the base result. The integrated DCF also varies WACC and terminal growth. At 2.5 percent terminal growth, raising WACC from 7.5 to 8.5 percent lowers the illustrative value proxy from $33.33 to $26.89. The terminal value accounts for about 81 percent of base enterprise value, so these assumptions matter considerably.
+
+[3:20–4:20 | Show verify() and run the command below in a terminal.]
+The verify function checks five-year balance-sheet and cash ties. It also checks that valuation decreases when WACC rises, rises when perpetual growth rises, and refuses a terminal growth rate greater than or equal to WACC. It includes a deliberately corrupted balance-sheet scenario: adding ten million dollars to the recorded gap must trigger an error. I'll demonstrate the invalid-growth test by executing this command:
+python -c "import sys; sys.path.insert(0,'models'); import walmart_project1 as m; m.dcf([100]*5, wacc=0.05, terminal_g=0.05)"
+[Run it; show ValueError. If the real observed result differs, explain it accurately.]
+The program should raise a ValueError rather than present a misleading result.
+
+[4:20–5:00 | Show GitHub Actions and outputs/visible-output.md.]
+A reviewer can run python models/walmart_project1.py from the repository root. GitHub Actions has also compiled and executed the model successfully, and the saved output records preliminary downside, base, and upside values of $16.93, $33.33, and $42.76. The largest unresolved financial risks are the normalized starting year, the 7.5 percent WACC, and the enterprise-to-common-equity bridge. Successful tests establish internal consistency, not a final recommendation to purchase Walmart.
+
+END DRAFT — update with the actual commands run, actual error/result, and spoken wording after recording.
