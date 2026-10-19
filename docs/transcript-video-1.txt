@@ -1,0 +1,20 @@
+DRAFT RECORDING SCRIPT — VIDEO 1: RESEARCH EVOLUTION AND AI-OUTPUT CHECK
+FIN 43900 Project 1 | Walmart | Target: no longer than 3:00
+STATUS: NOT A RECORDING TRANSCRIPT. Replace or correct after recording to match spoken words.
+Do not read any bracketed direction aloud.
+
+[Show original research and Edition B change table.]
+For Project 1, I analyzed Walmart common stock for a buy-side portfolio manager deciding whether to initiate a position. My current recommendation is WATCH or DEFER, because I do not believe my current valuation estimates are sufficiently verified to support buying.
+
+My initial research focused on Walmart's scale, grocery business, competitive advantages, and its ability to generate cash. The later analysis developed into a five-year forecast for fiscal years 2027 through 2031, including income statement, balance sheet, and cash-flow projections. It also introduced an enterprise discounted-cash-flow model, relative valuation comparisons, and downside scenarios.
+
+[Show project1/edition-b-committee-memo.md and its A-to-B table.]
+A key change is how I evaluate uncertainty. Instead of relying on a single estimate, I look at how revenue growth, gross margins, operating costs, capital spending, and the discount rate affect the results. The model's illustrative downside, base, and upside equity-value proxies are $16.93, $33.33, and $42.76 per share. These are not fully verified fair values, and I do not present them as an investable valuation range.
+
+[Show outputs/visible-output.md and project1/historical-evidence-and-normalization.md.]
+AI helped me organize the model and its checks, but I cannot treat an AI-generated conclusion as reliable without verification. One material claim to investigate is that adding cash and subtracting reported borrowings fully converts enterprise value into common equity value. Reviewing the FY2026 balance sheet shows why that is incomplete: Walmart also reports noncontrolling interests and lease obligations. The source ledger documents those amounts, while the present model leaves their final valuation treatment unresolved. Accordingly, I qualified the AI-assisted valuation result instead of accepting the per-share number as definitive. Before submitting, I still need to document my own independent source check and its outcome.
+
+[Close on Edition B.]
+The overall decision has not changed to a buy recommendation. What changed is the level of modeling and the recognition of specific, material limitations. My remaining work is to verify historical inputs, normalize the base year, defend cost-of-capital and peer assumptions, and reconcile enterprise value to common equity. Those steps determine whether the committee should reconsider Walmart.
+
+END DRAFT — verify against your actual Edition A; correct the AI check to reflect what you personally verified. Do not submit this unedited as an authentic recording transcript.
