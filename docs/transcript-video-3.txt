@@ -1,0 +1,25 @@
+DRAFT RECORDING SCRIPT — VIDEO 3: BUY-SIDE INVESTMENT COMMITTEE PRESENTATION
+FIN 43900 Project 1 | Walmart | Target: no longer than 5:00
+STATUS: NOT A RECORDING TRANSCRIPT. Replace or correct after recording to match spoken words.
+Do not read bracketed screen directions aloud.
+
+[0:00–1:10 | Open the runnable model and lead with decision; LIVE DEMONSTRATION REQUIRED.]
+My recommendation to the investment committee is WATCH or DEFER on Walmart common stock. I am not recommending a purchase based on an unverified valuation bridge.
+
+I'll start by demonstrating how the model responds to an investment assumption. Here is the base-case result, using the current 7.5 percent WACC and 2.5 percent terminal growth: an illustrative $33.33 per share. Holding terminal growth constant, if I increase WACC to 8.5 percent, the model gives approximately $26.89. Restoring WACC to 7.5 percent returns the base-case $33.33. [Actually perform the model run and restore base. If a value or procedure differs, report what you observe.]
+
+Now I'll test a failure condition: setting terminal growth equal to WACC. [Execute the available dcf call with equal rates and show the ValueError, then restore valid rates and run again.] The model rejects that invalid terminal-value assumption rather than quietly returning a value.
+
+[1:10–2:05 | Keep model visible; show outputs/visible-output.md and assumptions.]
+My five-year forecast covers fiscal 2027 through 2031. It starts from Walmart's FY2026 reporting inputs and projects growth, margins, expenses, capital spending, debt movements, and cash generation. The integrated FCFF DCF produces provisional downside, base, and upside proxies of $16.93, $33.33, and $42.76 per share. These figures are model sensitivity outputs, not independently validated fair value endpoints.
+
+[2:05–3:05 | Show source ledger and why proxy is not fair value.]
+There are two reasons I cannot responsibly take that output directly to a trade. First, a large fraction of enterprise value comes from the terminal value. About 81 percent of the base-case enterprise value depends on future cash flows after the explicit five-year forecast. Second, the current enterprise-to-common-equity bridge adds cash and subtracts borrowings but has not fully resolved Walmart's noncontrolling interests and finance and operating leases. I also need to substantiate the WACC and reconcile my peer valuation methods.
+
+[3:05–4:15 | Show downside case, risks, and conditional recommendation.]
+The downside case lowers sales growth and gross margin, increases the SG&A burden, and raises capital spending. That combination reduces projected operating profit, cash generation, and the value proxy. My most important monitoring indicators are comparable sales, operating margins, capital expenditure, cash conversion, debt, and changing share count. If the downside assumptions become more likely, I would require even greater valuation support before initiating a position.
+
+[4:15–5:00 | Committee ask.]
+I am asking the committee to defer initiation and authorize completion of three diligence items: a normalized and sourced FY2026 financial base, a correctly defined enterprise-to-common-equity reconciliation including noncontrolling interests and leases, and consistent peer EV and P/E checks. If that work produces a defensible valuation interval and a clear margin of safety relative to an independently verified current market quote, we can return with a purchase proposal. Until then, I recommend keeping Walmart on the watch list.
+
+END DRAFT — the professor requires the live demonstration to be the opening and main delivery. Edit this draft to match precisely what you actually demonstrate, state any subsequent justified final range, and correct the transcript against the actual recording.
